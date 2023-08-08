@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import "variables";
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+input,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  line-height: 1.5;
+  font-weight: $fw-rg;
+  color: $Body-clr;
+  font-size: $fs-16;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-weight: $fw-sBold;
+  color: $Headings-clr;
+}
+
+h2{
+  font-size: $fs-32;
+  margin-bottom: 2rem;
+}
+
+h3{
+  font-size: $fs-24;
+  width: max-content;
+}
+
+h4{
+  font-size: $fs-20;
+  display: inline;
+}
+
+.unit{
+  color: $BMI-form-bg;
+  font-size: $fs-24;
+  font-weight: $fw-sBold;
+  position: absolute;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    max-width: fit-content;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+};
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+  appearance: $Headings-clr;
+  outline: none;
+  border: none;
+  border: 1px solid $Borders-form-input;
+  border-radius: 0.75em;
+  padding-inline: 1.5rem 1.25rem;
+  padding-block: 1.25rem;
+  font-weight: $fw-sBold;
+  width: 100%;
+  font-size: $fs-24;
+}
+
+input[type="number"]:focus {
+  outline: 1px solid $BMI-form-bg;
+}
+
+input[type=number]::placeholder {
+  font-size: $fs-24;
+  font-weight: $fw-sBold;
+  opacity: 0.25;
+}
+
+label{
+  display: block;
+  cursor: pointer;
+}
+
+body{
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+/*logo*/
+#logo{
+  width: 2.5rem;
+  height: 2.5rem;
+    @media screen and (min-width: 87.5em) {
+      width: 4em;
+      height: 4em;
+    }
+}
+
+/*line shapes visible only in desktop size*/
+    #main-shape,
+    #limit-shape{
+      display: none;
+  }
+
+  @media screen and (min-width: 87.5em) {
+    #main-shape,
+    #limit-shape{
+      display: block;
+  }
+}
+
+/*shape blue hero-section*/
+.blue-shape{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 40rem;
+  background: linear-gradient($Gradient-shape-head);
+  border-radius: 0 0 2.1875em 2.1875em;
+  z-index: -1;
+}
+
+.hero-section{
+  @include flex-col;
+  text-align: center;
+  padding-inline: 1.5rem;
+  padding-block-start: 2rem;
+  gap: 3rem;
+
+    .text-side{
+      @include flex-col;
+      gap: 1.5rem;
+
+        h1{
+          font-size: $fs-48;
+        }
+    }
+
+  .form-side{
+    @include flex-col;
+    align-items: stretch;
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    border-radius: 1rem;
+    background-color: $Pure-white;
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+     .radios{
+       @include flex-row;
+       justify-content: space-between;
+
+        .container{
+          @include flex-row;
+          align-items: center;
+
+            .label-radio{
+              font-size: $fs-16;
+              font-weight: $fw-sBold;
+              margin-inline-start: 1.125em;
+              color: $Headings-clr;
+            }
+        }
+
+            
+
+            /*RADIO BUTTONS FORM*/
+            /*for remove native radio buttons style*/
+            input[type="radio"] {
+              /* Add if not using autoprefixer */
+              -webkit-appearance: none;
+              appearance: none;
+              /* For iOS < 15 to remove gradient background */
+              /* background-color: #fff; */
+              /* Not removed via appearance */
+              margin: 0;
+
+              //and style unchecked (default) radios
+              height: 1.9375em;
+              width: 1.9375em;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: all 0.3s linear;
+              display: grid;
+              place-content: center;
+              position: relative;
+              z-index: 1;
+            }
+
+            input[type="radio"]::after {
+              content: "";
+              width: 1.9375em;;
+              height: 1.9375em;;
+              border-radius: 50%;
+              position: absolute;
+              border: 1px solid $Borders-form-input;
+              transition: 120ms transform ease-in-out;
+            }
+
+            input[type="radio"]:hover::after {
+              border: 1px solid $BMI-form-bg;
+            }
+
+            input[type="radio"].active::after{
+              background-color: $BMI-form-bg;
+              opacity: 0.15;
+            }
+
+            input[type="radio"]::before {
+              content: "";
+              width: 1em;
+              height: 1em;
+              border-radius: 50%;
+              transform: scale(0);
+              transition: 120ms transform ease-in-out;
+              background-color: $BMI-form-bg;
+              position: relative;
+              z-index: 2;
+            }
+
+            input[type="radio"].active::before {
+              transform: scale(1);
+            }
+      }
+
+        /*BOTH LABELS FOR METRIC AND IMPERIAL MEASURE UNIT*/
+      .lab-unit{
+        color: $Body-clr;
+        font-size: $fs-14;
+        align-self: start;
+        margin-block-end: 0.75rem;
+      }
+
+
+        /*GENERAL CONTAINER METRIC UNIT*/
+      .metric-unit{
+        @include flex-col;
+        align-items: stretch;
+        gap: 1rem;
+
+          /*BOTH CONTAINER HEIGHT AND WEIGHT (METRIC)*/
+          .metric-container{
+            @include flex-col;
+            align-items: stretch;
+            position: relative;
+
+              /*unit of measure*/
+              span{
+               position: absolute;
+                right: 0;
+                width: min-content;
+                right: 1.5rem;
+                bottom: 1.25rem;
+              }
+          }
+       }
+    
+
+      
+
+      /*IMPERIAL UNIT*/
+      .imperial-unit{
+        @include flex-col;
+        gap: 1rem;
+        display: none;
+
+          .imp-container{
+            @include flex-col;
+            
+              .field-imp{
+                @include flex-row;
+                position: relative;
+                gap: 1rem;
+
+                div{
+                 @include flex-row;
+                 justify-content: space-between;
+                 position: relative;
+                }
+
+                /*ONLY IMPERIAL INPUT*/
+                
+
+                .ft,
+                .st{
+                    position: absolute;
+                    right: 0;
+                    max-width: min-content;
+                    transform: translateX(-1.5rem);
+                }
+
+                .in,
+                .lbs{
+                  position: absolute;
+                  right: 1.25rem;
+                  max-width: min-content;
+                }
+              } 
+          } 
+       }
+       
+  }
+
+  .result{
+    @include flex-col-start;
+    text-align: left;
+    padding: 2rem;
+    background: linear-gradient(90deg, #345FF6 0%, #587DFF 100%);
+    border-radius: 1rem;
+    font-size: $fs-16;
+    gap: 1.5rem;
+
+      .welcome{
+          h3{
+            font-size: $fs-24;
+            color: $Pure-white;
+            margin-block-end: 1rem;
+          }
+
+          p{
+            font-weight: $fw-rg;
+            font-size: $fs-14;
+          }
+      }
+      
+
+      .result-number,
+      .result-body-cont{
+        display: none;
+      }
+
+      p{
+        color: $Pure-white;
+        font-weight: $fw-sBold;
+        margin-block-end: 0.75rem;
+      }
+
+      #result-BMI{
+        font-size: $fs-48;
+        color: $Pure-white;
+        font-weight: $fw-sBold;
+      }
+
+        #result-body{
+          font-weight: $fw-rg;
+          font-size: $fs-14;
+        }
+
+        #result-min-weight,
+        #result-max-weight{
+          font-weight: $fw-bold;
+        }
+  }
+}
+
+
+/*MAIN SECTION*/
+.info-BMI{
+  padding-block: 4.5rem;
+
+    .means-result{
+      @include flex-col;
+      gap: 3rem;
+      margin-block-end: 4.4375rem;
+
+        .info-txt{
+          padding-inline: 1.5rem;
+        }
+    }
+
+    .info-cards{
+      @include flex-col-start;
+      gap: 2.5rem;
+      padding-inline: 1.5rem;
+      position: relative;
+      padding-block: 3.5rem;
+
+        &::before{
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 35px;
+          opacity: 0.25;
+          background: var(--gradient-1, linear-gradient(315deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%));
+        }
+
+        .card-item{
+          @include flex-col-start;
+          gap: 1.5rem;
+
+            h3{
+              margin-block-end: 1.5rem;
+            }
+        }
+    }
+}
+
+.BMI-limit {
+  @include flex-col;
+  gap: 2.5rem;
+  padding-inline: 1.5rem;
+  padding-block-end: 6rem;
+
+    .info-limit{
+      text-align: center;
+    }
+
+    .limit-cards{
+      @include flex-col;
+      gap: 1rem;
+
+        .card{
+          @include flex-col-start;
+          gap: 1.25rem;
+          box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+          background-color: $Pure-white;
+          border-radius: 1rem;
+          padding: 1.5rem;
+
+            .img-title{
+              @include flex-row;
+              gap: 1rem;
+            }
+        } 
+    }
+}

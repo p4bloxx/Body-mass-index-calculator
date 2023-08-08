@@ -1,0 +1,135 @@
+/*COLORS*/
+/*TIPOGRAPHY*/
+/*UTILITY CLASSES*/
+/*ONLY TABLET SIZE*/
+@media screen and (min-width: 48rem) {
+  .hero-section {
+    padding-inline: 2.6875rem;
+  }
+  .hero-section .text-side {
+    gap: 0;
+  }
+  .hero-section .text-side #logo {
+    margin-block-end: 2.6875rem;
+  }
+  .hero-section .text-side h1 {
+    margin-block-end: 1.5rem;
+    max-width: 12ch;
+  }
+  .hero-section .text-side p {
+    max-width: 70ch;
+  }
+  .hero-section .form-side {
+    padding: 2rem;
+    gap: 2rem;
+    align-self: stretch;
+  }
+  .hero-section .form-side .radios {
+    justify-content: start;
+    gap: 1rem;
+    align-items: center;
+  }
+  .hero-section .form-side .radios .container {
+    width: 100%;
+    justify-content: start;
+  }
+  .hero-section .form-side .metric-unit {
+    flex-direction: row;
+    justify-content: stretch;
+    gap: 1.5rem;
+  }
+  .hero-section .form-side .metric-unit .metric-container {
+    width: 100%;
+  }
+  .hero-section .form-side .imperial-unit {
+    align-items: stretch;
+  }
+  .hero-section .form-side .imperial-unit .imp-container {
+    align-items: stretch;
+  }
+  .hero-section .form-side .imperial-unit .imp-container .field-imp {
+    gap: 1.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-section .form-side .imperial-unit .imp-container .field-imp div {
+    width: 100%;
+  }
+  .hero-section .form-side .result {
+    border-radius: 160px 999px 999px 160px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12rem;
+  }
+  .hero-section .form-side .result #your-BMI {
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .hero-section .form-side .result #result-body {
+    max-width: 30ch;
+  }
+  .info-BMI {
+    padding-block: 6rem;
+  }
+  .info-BMI .means-result {
+    flex-direction: row;
+    justify-content: start;
+    gap: 2rem;
+    margin-block-end: 6rem;
+  }
+  .info-BMI .means-result .info-txt {
+    padding-inline: 0 2.6875rem;
+  }
+  .info-BMI .means-result #img-BMI {
+    width: 26rem;
+    height: 26rem;
+    transform: translateX(-3.5rem);
+  }
+  .info-BMI .info-cards {
+    padding-inline: 2.6875rem;
+    padding-block: 3.75rem;
+  }
+  .info-BMI .info-cards .card-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .BMI-limit {
+    padding-inline: 2.6875rem;
+    gap: 3.5rem;
+  }
+  .BMI-limit .info-limit p {
+    max-width: 65ch;
+  }
+  .BMI-limit .limit-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "gender gender age age" "muscle muscle pregnant pregnant" ". race race .";
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    row-gap: 1.25rem;
+  }
+  .BMI-limit .limit-cards .card {
+    justify-content: stretch;
+    padding: 2rem;
+  }
+  .BMI-limit .limit-cards #gender-card {
+    grid-area: gender;
+  }
+  .BMI-limit .limit-cards #age-card {
+    grid-area: age;
+    align-self: stretch;
+  }
+  .BMI-limit .limit-cards #muscle-card {
+    grid-area: muscle;
+    align-self: stretch;
+  }
+  .BMI-limit .limit-cards #pregnant-card {
+    grid-area: pregnant;
+  }
+  .BMI-limit .limit-cards #race-card {
+    grid-area: race;
+  }
+}/*# sourceMappingURL=Tablet-size.css.map */

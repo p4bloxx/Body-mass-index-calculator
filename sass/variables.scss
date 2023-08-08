@@ -1,0 +1,38 @@
+/*COLORS*/
+$BMI-form-bg: hsla(227, 92%, 58%, 1);
+$Headings-clr: hsla(215, 31%, 21%, 1);
+$Body-clr: hsla(215, 17%, 44%, 1);
+$Borders-form-input: hsla(200, 24%, 88%, 1);
+$Pure-white: hsla(0, 0%, 100%, 1);
+$Gradient-shape-head: 315deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%;
+
+/*TIPOGRAPHY*/
+$fs-14: 0.875rem;
+$fs-16: 1rem;
+$fs-20: 1.25rem;
+$fs-24: 1.5rem;
+$fs-32: 2rem;
+$fs-48: 3rem;
+$fs-64: 4rem;
+
+$fw-rg: 400;
+$fw-sBold: 600;
+$fw-bold: 700;
+
+/*UTILITY CLASSES*/
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-col-start {
+  @include flex-col;
+  align-items: start;
+}
+
+@mixin flex-row{
+  @include flex-col;
+  flex-direction: row;
+}

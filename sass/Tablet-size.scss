@@ -1,0 +1,171 @@
+@import "variables";
+
+/*ONLY TABLET SIZE*/
+@media screen and (min-width: 48rem) {
+  .hero-section{
+    padding-inline: 2.6875rem;
+
+    .text-side{
+      gap: 0;
+
+        #logo{
+          margin-block-end: 2.6875rem;
+        }
+
+        h1{
+          margin-block-end: 1.5rem;
+          max-width: 12ch;
+        }
+
+        p{
+          max-width: 70ch;
+        }
+      }
+
+      .form-side{
+        padding:2rem ;
+        gap: 2rem;
+        align-self: stretch;
+
+          .radios{
+            justify-content: start;
+            gap: 1rem;
+            align-items: center;
+
+              .container{
+                width: 100%;
+                justify-content: start;
+              }
+          }
+
+          .metric-unit{
+            flex-direction: row;
+            justify-content: stretch;
+            gap: 1.5rem;
+   
+              .metric-container{
+                width: 100%;
+              }
+          }
+
+          .imperial-unit{
+            align-items: stretch;
+
+              .imp-container{
+                align-items: stretch;
+               
+
+                  .field-imp{
+                    gap: 1.5rem;
+                    width: 100%;
+                    justify-content: center;
+
+                      div{
+                        width: 100%;
+                      }
+                    }
+                }
+            }
+
+          .result{
+            border-radius: 160px 999px 999px 160px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12rem;
+
+              #your-BMI{
+                width: max-content;
+              }
+
+              #result-body{
+                max-width: 30ch;
+              }
+          }
+      }
+  }
+
+  .info-BMI{
+    padding-block: 6rem;
+
+      .means-result{
+        flex-direction: row;
+        justify-content: start;
+        gap: 2rem;
+        margin-block-end: 6rem;
+
+        .info-txt{
+          padding-inline: 0 2.6875rem;
+        }
+
+        #img-BMI{
+          width: 26rem;
+          height: 26rem;
+          transform: translateX(-3.5rem);
+        }
+      }
+
+      .info-cards{
+        padding-inline: 2.6875rem;
+        padding-block: 3.75rem;
+
+          .card-item{
+            flex-direction: row;
+            align-items: center;
+            gap: 2.5rem;
+          }
+      }
+  }
+
+  .BMI-limit{
+    padding-inline: 2.6875rem ;
+    gap: 3.5rem;
+
+      .info-limit{
+
+          p{
+            max-width: 65ch;
+          }
+      }
+
+      .limit-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        grid-template-areas: "gender gender age age"
+                              "muscle muscle pregnant pregnant"
+                              ". race race .";
+                  
+        column-gap: 1rem;
+        row-gap: 1.25rem;
+
+          .card{
+            justify-content: stretch;
+            padding: 2rem;
+          }
+
+          #gender-card{
+            grid-area: gender;
+          }
+
+          #age-card{
+            grid-area: age;
+            align-self: stretch;
+          }
+
+          #muscle-card{
+            grid-area: muscle;
+            align-self: stretch;
+          }
+
+          #pregnant-card{
+            grid-area: pregnant;
+          }
+
+          #race-card{
+            grid-area: race;
+          }
+      }
+  }
+}

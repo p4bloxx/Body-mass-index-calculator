@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-bmi-index-calculator-html-css-js-nHNnM5-3qe](https://www.frontendmentor.io/solutions/responsive-bmi-index-calculator-html-css-js-nHNnM5-3qe)
+- Live Site URL: [https://p4bloxx.github.io/Body-mass-index-calculator/](https://p4bloxx.github.io/Body-mass-index-calculator/)
 
 ## My process
 
